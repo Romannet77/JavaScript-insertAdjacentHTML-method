@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JavaScript</h1>
+    </header>
+    <section>
+      <h2>
+        Creating and Adding New HTML Elements by JavaScript Using
+        <span>insertAdjacentHTML()</span> method
+      </h2>
+      <div class="main-content-container">
+        <div class="js-code-info-container">
+          <!-- <button class="button-add-html-element">Add HTML element</button> -->
+          <div class="method-description-container">
+            <p>
+              We wil use one of the ways to create HTML elements by JavaScript -
+              <span class="bold-dark-text">insertAdjacentHTML()</span>
+              method.
+              <!-- <span class="bold-dark-text">document.createElement()</span>
+              method -->
+            </p>
+            <h3>insertAdjacentHTML() method</h3>
+            <p>
+              <span class="red-color-text"
+                >element<span class="bold-dark-text"
+                  >.insertAdjacentHTML(<span class="green-color-text"
+                    >position</span
+                  >, <span class="green-color-text">stringHtml</span>)
+                </span></span
+              >:
+            </p>
+            <p>
+              The <span class="red-color-text">element</span> is the HTML
+              element, relative to which we are adding the new HTML element that
+              we create.
+            </p>
+            <p>
+              The <span class="green-color-text">position</span> parameter
+              indicates where exactly we insert the new HTML element that we
+              create.
+            </p>
+            <p>
+              The <span class="green-color-text">stringHtml</span> paramater is
+              this new HTML element that we create. The type of
+              <span class="green-color-text">stringHtml</span> parameter is a
+              string which contains HTML code of the created element.
+            </p>
+            <p>
+              For example, we can use
+              <span class="bold-dark-text">insertAdjacentHTML()</span> method to
+              add new <span class="gray-color-text">&lt;li&gt;</span> elements
+              to the parent <span class="gray-color-text">&lt;ul&gt;</span> HTML
+              element that already contains three existing &lt;li&gt; elements.
+            </p>
+          </div>
+          <div class="ul-container">
+            <ul class="ul-existing-htm">
+              <li>existing &lt;li&gt; html element</li>
+              <li>existing &lt;li&gt; html element</li>
+              <li>existing &lt;li&gt; html element</li>
+            </ul>
+          </div>
+          <div>
+            <p>We create the followig JavaScript code to do it:</p>
+            <div class="js-code-container">
+              <p class="js-code">
+                const ul = document.querySelector(".ul-insert-html-example");
+              </p>
+              <p class="js-code">
+                const li = `&lt;li&gt;element added by
+                &lt;span&gt;JavaScript&lt;/span&gt;&lt;/li&gt;`;
+              </p>
+              <p class="js-code">ul.insertAdjacentHTML("afterbegin", li);</p>
+            </div>
+            <p>And we have the result:</p>
+          </div>
+          <div class="ul-container">
+            <ul class="ul-insert-html-example">
+              <li>existing &lt;li&gt; html element</li>
+              <li>existing &lt;li&gt; html element</li>
+              <li>existing &lt;li&gt; html element</li>
+            </ul>
+          </div>
+          <p>
+            So, we can use the following parameters to insert the created
+            element:<br />
+            <span class="gray-color-text">"afterbegin"</span>,
+            <span class="gray-color-text">"beforeend"</span>,
+            <span class="gray-color-text">"beforebegin"</span>,
+            <span class="gray-color-text">"afterend"</span>.
+            <!-- (first child) afterend After the element beforebegin Before the
+            element beforeend Before the end of the element (last child) We have
+            already used the parameter "afterbegin" above. It "responses" for
+            inserting created HTML element before the first child element of the
+            parent element -->
+          </p>
+          <p>
+            <span class="gray-color-text">"afterbegin"</span> - "responses" for
+            inserting created HTML element before the first child element of the
+            parent element:
+          </p>
+          <div class="ul-container">
+            <div>
+              <ul class="ul-afterbegin">
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <span class="gray-color-text">"beforeend"</span> - "responses" for
+            inserting created HTML element after the last child element of the
+            parent element:
+          </p>
+          <div class="ul-container">
+            <div>
+              <ul class="ul-beforeend">
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <span class="gray-color-text">"beforebegin"</span> - "responses" for
+            inserting created HTML element before its parent element:
+          </p>
+          <div class="ul-container">
+            <div>
+              <ul class="ul-beforebegin">
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <span class="gray-color-text">"afterend"</span> -"responses" for
+            inserting created HTML element after its parent element:
+          </p>
+          <div class="ul-container">
+            <div>
+              <ul class="ul-afterend">
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div>
+          <button class="button-add-html-element">Add HTML element</button>
+          <ul>
+            <li>existing &lt;li&gt; html element</li>
+            <li>existing &lt;li&gt; html element</li>
+            <li>existing &lt;li&gt; html element</li>
+          </ul>
+        </div> -->
+      </div>
+      <!-- <div class="main-content-container">
+        <div class="action-container">
+          <div class="input-container">
+            <input
+              type="text"
+              placeholder="enter framework"
+              id="input-product"
+              name="name"
+              size="17"
+            />
+            <button class="button-add-framework">Add Framework</button>
+          </div>
+          <div>
+            <div class="ul-container">
+              <ul>
+                <li class="element-list">
+                  JavaScript<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  Python<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  Java<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  PHP<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  C++<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+                <li class="element-list">
+                  Ruby<span>programming<br />language</span
+                  ><button class="btn-delete">delete</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="code-info">
+          <p>
+            So, we have existing &lt;li&gt; elements that contain
+            "programming languages" and buttons "delete".
+          </p>
+          <p>
+            We are adding new Dynamically Created &lt;li&gt; Elements with
+            "Frameworks" and Buttons "delete" by "click" or "keypress" events
+            using input value.
+            <span class="try-it"
+              >(Try It! Enter the Framework that you know and click "Add
+              Framework" button!)</span
+            >
+          </p>
+          <p>
+            I have created the following code for Adding &lt;li&gt; element
+            (that contains the name of Framework and Button "delete") at the
+            beginning of the list by clicking "Add Framework" button or by
+            pressing key "Enter":
+          </p>
+          <p class="js-variables">
+            const button = document.querySelector("button");
+          </p>
+          <p class="js-variables">
+            const input = document.querySelector("#input-product");
+          </p>
+          <p class="js-variables">const ul = document.querySelector("ul");</p>
+          <p class="js-variables">const h2 = document.querySelector("h2");</p>
+          <p class="js-variables">const h4 = document.querySelector("h4");</p>
+          <p class="js-variables">
+            const deleteButtons = document.querySelectorAll(".btn-delete");
+          </p>
+          <p class="js-variables">
+            const mainCode = document.querySelector(".event-delegation");
+          </p>
+          <p></p>
+          <p class="js-code">
+            button.addEventListener("click", function () {<br />
+            if (input.value.length > 0) {<br />
+            const htmlEl = `&lt;li class="element-list"&gt;
+            ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
+            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br />
+            ul.insertAdjacentHTML("afterBegin", htmlEl);<br />input.value =
+            "";<br />
+            &nbsp;&nbsp;} <br />});
+          </p>
+          <p class="js-code">
+            input.addEventListener("keypress", function (e) { if (e.key ===
+            "Enter" && input.value !== "") {<br />
+            const htmlEl = `&lt;li class="element-list"&gt;
+            ${input.value}&lt;span&gt;framework&lt;/span&gt;&lt;button
+            class="btn-delete"&gt;delete&lt;/button&gt;&lt;/li&gt;`;<br />
+            ul.insertAdjacentHTML("afterBegin", htmlEl);<br />input.value =
+            "";<br />
+            &nbsp;&nbsp;}<br />
+            });
+          </p>
+          <p>
+            We want to remove added &lt;li&gt; element by clicking "delete"
+            button. The problem is that an ordinary code will affect only
+            &lt;li&gt; elements with "programming languages" but the Dynamically
+            Created Elements with "frameworks" will not be affected:
+          </p>
+          <p class="js-code">
+            deleteButtons.forEach((delBtn) => {
+            <br />delBtn.addEventListener("click", () => {<br />
+            delBtn.parentElement.remove(); <br />&nbsp;&nbsp;}); <br />});
+          </p>
+          <p>
+            So, It means that we can delete only "programming languages" but not
+            added "frameworks" by clicking "delete" button !
+          </p>
+          <p>
+            To solve this problem and make our new added &lt;li&gt; elements
+            (with "frameworks" and "delete" buttons) clickable, we use
+            <span class="delegation">"Event Delegation"</span> pattern!
+          </p>
+          <p>
+            It means that we are adding handling of the event not directly to
+            our button "delete" element but to the "ul" element, which contains
+            all &lt;li&gt; elements and stands above them in DOM structure. So,
+            We are "catching" an event triggered in our "ul" element that
+            matches our selected button "delete" element:
+          </p>
+          <p class="js-code event-delegation">
+            ul.addEventListener("click", (event) => {<br />
+            if (event.target.classList.contains("btn-delete")) {<br />
+            event.target.parentElement.remove();<br />
+            h2.style.color = "red";
+            <br />h4.classList.toggle("h4-toogle-style");<br />
+            mainCode.classList.toggle("event-delegation");<br />
+            &nbsp;&nbsp;}<br />
+            });
+          </p>
+          <h4>conclusion</h4>
+          <p>
+            Using <span class="delegation">"Event Delegation"</span> pattern we
+            can provide an element we need with the event handler, based on the
+            event attached to its parent element or to the element standing
+            higher in the DOM. It allows us to include all Dynamically Created
+            Elements to the list of event handlers that we need !
+          </p>
+        </div>
+      </div> -->
+    </section>
+    <footer>
+      <div class="footer-img">
+        <a href="https://github.com/Romannet77" target="_blank"
+          ><img class="my-photo" src="./images/my-photo.jpeg" alt="my-photo"
+        /></a>
+      </div>
+      <div class="profile-links">
+        <a
+          href="https://www.linkedin.com/in/roman-yurchenko-89630923b/"
+          target="_blank"
+        >
+          <img src="./images/linkedin-icon.svg" alt="LinkedIn-img" />
+        </a>
+        <a href="https://github.com/Romannet77" target="_blank"
+          ><img src="./images/github-icon.svg" alt="Git-img"
+        /></a>
+      </div>
+      <p class="author-info">
+        © 2022 Written and Developed by<span
+          ><a href="https://github.com/Romannet77" target="_blank"
+            >Mr. Roman Yurchenko</a
+          ></span
+        >
+      </p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
