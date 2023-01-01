@@ -39,6 +39,15 @@ h3 {
   font-size: 1.5rem;
 }
 
+a {
+  color:rgb(1, 134, 195);;
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 div.main-content-container {
   display: flex;
   flex-direction: column;
@@ -65,7 +74,10 @@ div.js-code-container {
 
 div p.js-code {
   text-align: unset;
+  padding-left: 0.8rem;
 }
+
+
 
 p span.bold-blue-text {
   color: rgb(25, 54, 247);
@@ -73,7 +85,7 @@ p span.bold-blue-text {
 }
 
 p span.green-color-text {
-  color: green;
+  color: rgb(12, 151, 12);
   font-weight: bold;
 }
 
@@ -158,7 +170,7 @@ footer .author-info {
 
 footer p.author-info span a {
   color: rgb(209, 14, 14);
-  text-decoration: none;
+  text-decoration:none;
   font-size: large;
   margin-left: 0.5rem;
 }
