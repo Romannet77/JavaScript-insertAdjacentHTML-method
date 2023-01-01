@@ -7,25 +7,27 @@ const ulAfterend = document.querySelector(".ul-afterend");
 
 const li = `<li>&lt;li&gt; element added by <span> JavaScript</span></li>`;
 
-const liAddedByClick = `<li>&lt;li&gt; added by "click" (JavaScript)</li>`;
 
-const button = document.querySelector("button");
-
-// button.addEventListener("click", () => {
-//   ul.insertAdjacentHTML("afterbegin", liAddedByClick);
-// });
-
-// ulWithExistingHtml.insertAdjacentHTML("afterbegin", li);
 ul.insertAdjacentHTML("afterbegin", li);
 ulAfterbegin.insertAdjacentHTML("afterbegin", li);
 ulBeforeend.insertAdjacentHTML("beforeend", li);
 ulBeforebegin.insertAdjacentHTML("beforebegin", li);
 ulAfterend.insertAdjacentHTML("afterend", li);
 
-/*
+/* adding <li> element by by click on button element  */
 
-const ul = document.querySelector(".ul-insert-html-example");
+const buttonHtmlElement = `<button class="button-add-html-element">Add &lt;li&gt; element</button>`;
 
-const li = `<li>&lt;li&gt; element added by <span> JavaScript</span></li>`;
+const ulParentEl = document.querySelector("ul.parent-element-for-button");
 
-ul.insertAdjacentHTML("afterbegin", li);*/
+const liAddedByClick = `<li>&lt;li&gt; added by "click" (<span class="red-color-text">JavaScript</span>)</li>`;
+
+ulParentEl.insertAdjacentHTML("beforebegin", buttonHtmlElement);
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+  ulParentEl.insertAdjacentHTML("afterbegin", liAddedByClick);
+});
+
+
