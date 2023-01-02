@@ -79,20 +79,30 @@ div p.js-code {
 
 
 
-p span.bold-blue-text {
+.bold-blue-text {
   color: rgb(25, 54, 247);
   font-weight: bold;
 }
 
-p span.green-color-text {
+.green-color-text {
   color: rgb(12, 151, 12);
   font-weight: bold;
 }
 
-p span.red-color-text {
+.red-color-text {
   color: red;
   font-weight: bold;
 }
+
+.violet-color-text {
+  color: rgb(116, 63, 170);
+}
+
+.parent-element-for-button span.red-color-text {
+  font-weight: normal;
+}
+
+
 
 p span.gray-color-text {
   background-color: rgba(229, 229, 229, 0.9);
@@ -114,14 +124,6 @@ ul {
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.2);
 }
 
-div.ul-container li span {
-  color: rgb(116, 63, 170);
-}
-
-div.ul-container li span.red-color-text {
-  color: red;
-}
-
 li {
   margin: 1rem 0.2rem;
   font-size: 1.5rem;
@@ -129,11 +131,6 @@ li {
   border-radius: 5px;
   cursor: alias;
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 255, 0.2);
-}
-
-p span.delegation {
-  color: var(--blue-color);
-  font-weight: bold;
 }
 
 button {
@@ -197,10 +194,6 @@ footer .profile-links {
 footer .profile-links img {
   height: 4rem;
   padding: 0.5rem;
-}  div.action-container {
-  position: static;
-  width: 100%;
-  margin: auto;
 }
 
 @media only screen and (max-width: 744px) {
@@ -223,9 +216,4 @@ footer .profile-links img {
   div.js-code-info-container {
     width: 95%;
   }
-
-  ul {
-    width: 100%;
-  }
 }
-
