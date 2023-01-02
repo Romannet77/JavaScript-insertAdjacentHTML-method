@@ -23,8 +23,8 @@
             </p>
             <h3>insertAdjacentHTML() method</h3>
             <p>
-              <span class="green-color-text">element<span class="bold-blue-text">.insertAdjacentHTML(<span class="red-color-text">
-                position</span>, <span class="red-color-text">stringHtml</span>)</span></span>:
+              <span class="green-color-text">element<span class="bold-blue-text">.insertAdjacentHTML(<span class="red-color-text">position
+              </span>, <span class="red-color-text">stringHtml</span>)</span></span>:
             </p>
             <p>
               The <span class="green-color-text">element</span> is the existing HTMLelement,
@@ -38,7 +38,7 @@
               <span class="red-color-text">stringHtml</span> parameter is a string which contains HTML code.
             </p>
             <p>
-              For example, we can use <span class="bold-blue-text">insertAdjacentHTML()</span> method to
+              For example, we can use the <span class="bold-blue-text">insertAdjacentHTML()</span> method to
               add new <span class="gray-color-text">&lt;li&gt;</span> elements to the parent
               <span class="gray-color-text">&lt;ul&gt;</span> HTML element that already contains three existing &lt;li&gt; elements.
             </p>
@@ -131,16 +131,16 @@
               </div>
             </div>
             <p>
-              We can easily use <span class="bold-blue-text">insertAdjacentHTML()</span> method for creating and 
+              We can easily use the <span class="bold-blue-text">insertAdjacentHTML()</span> method for creating and 
               <a href="https://romannet77.github.io/js-event-delegation/" target="_blank">adding HTML elements dynamically by event</a>. 
-              For example, we want to add new
+              For example, we want to add the new
               <span class="gray-color-text">&lt;li&gt;</span> element to the parent
               <span class="gray-color-text">&lt;ul&gt;</span> element by the click
               <span class="gray-color-text">&lt;button&gt;</span> event.
             </p>
             <p>
-              First of all, let's create the button "Add &lt;li&gt;
-              element" using insertAdjacentHTML() method !
+              First of all, let's create a button "Add &lt;li&gt;
+              element" using the insertAdjacentHTML() method !
             </p>
             <div class="js-code-container">
               <p class="js-code">
@@ -151,7 +151,8 @@
                 const ulParentEl = document.querySelector( "ul.parent-element-for-button" );
               </p>
               <p class="js-code">
-                ulParentEl.insertAdjacentHTML( "beforebegin", buttonHtmlElement);
+                ulParentEl.insertAdjacentHTML(
+                  "beforebegin", buttonHtmlElement);
               </p>
             </div>
             <div class="ul-container">
@@ -176,8 +177,8 @@
                   (JavaScript)&lt;/span&gt;&lt;/li&gt;`;
                 </p>
                 <p class="js-code">
-                  button.addEventListener("click", () => {<br/> ulParentEl.insertAdjacentHTML( "afterbegin",
-                  liAddedByClick); <br/> &nbsp;&nbsp;}<br/>);
+                  button.addEventListener("click", () => {<br/> ulParentEl.insertAdjacentHTML(
+                    "afterbegin", liAddedByClick); <br/> &nbsp;&nbsp;}<br/>);  
                 </p>
               </div>
               <p>
@@ -226,8 +227,8 @@
           <img src="./images/github-icon.svg" alt="Git-img"/>
         </a>
       </div>
-      <p class="author-info">© 2022 Written and Developed by
-        <span><a href="https://github.com/Romannet77" target="_blank">Mr. Roman Yurchenko</a></span>
+      <p class="author-info">© 2022 Written and Developed by Mr.
+        <span><a href="https://github.com/Romannet77" target="_blank">Roman Yurchenko</a></span>
       </p>
     </footer>
     <script src="./script.js"></script>
