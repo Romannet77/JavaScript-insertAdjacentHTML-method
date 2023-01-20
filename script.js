@@ -5,8 +5,7 @@ const ulBeforeend = document.querySelector(".ul-beforeend");
 const ulBeforebegin = document.querySelector(".ul-beforebegin");
 const ulAfterend = document.querySelector(".ul-afterend");
 
-const li = `<li>&lt;li&gt; element added by <span class = violet-color-text> JavaScript</span></li>`;
-
+const li = `<li>&lt;li&gt; element added by <span class = violet-color-text>JavaScript</span></li>`;
 
 ul.insertAdjacentHTML("afterbegin", li);
 ulAfterbegin.insertAdjacentHTML("afterbegin", li);
@@ -29,5 +28,3 @@ const button = document.querySelector("button");
 button.addEventListener("click", () => {
   ulParentEl.insertAdjacentHTML("afterbegin", liAddedByClick);
 });
-
-

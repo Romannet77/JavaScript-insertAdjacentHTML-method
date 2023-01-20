@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header>
@@ -13,63 +13,80 @@
     </header>
     <section>
       <h2>
-        Creating  HTML Elements using <span>insertAdjacentHTML()</span> method 
+        Creating HTML Elements using <span>insertAdjacentHTML()</span> method
       </h2>
       <div class="main-content-container">
-        <div class="js-code-info-container">
+        <div class="code-content-container">
           <div class="method-description-container">
             <p>
-              We wil use <span class="bold-blue-text">insertAdjacentHTML()</span> method to create HTML elements and add them to the DOM.
+              We will use
+              <span class="bold-blue-text">insertAdjacentHTML()</span> method to
+              create HTML elements and add them to the DOM.
             </p>
             <h3>insertAdjacentHTML() method</h3>
             <p>
-              <span class="green-color-text">element<span class="bold-blue-text">.insertAdjacentHTML(<span class="red-color-text">position</span>, <span class="red-color-text">stringHtml</span>)</span></span>:
+              <span class="green-color-text">element<span class="bold-blue-text">.insertAdjacentHTML(<span class="red-color-text">position</span>,
+              <span class="red-color-text">stringHtml</span>)</span></span>:
             </p>
             <p>
-              The <span class="green-color-text">element</span> is the existing HTML element,
-              relative to which we are adding the new HTML element that we create.
+              The <span class="green-color-text">element</span> is the existing
+              HTML element, relative to which we are adding the new HTML element
+              that we create.
             </p>
             <p>
-              The <span class="red-color-text">position</span> parameter indicates where exactly we insert the new created HTML.
+              The <span class="red-color-text">position</span> parameter
+              indicates where exactly we insert the new created HTML.
             </p>
             <p>
-              The <span class="red-color-text">stringHtml</span> paramater is this new HTML element that we create. The type of
-              <span class="red-color-text">stringHtml</span> parameter is a string which contains HTML code.
+              The <span class="red-color-text">stringHtml</span> paramater is
+              this new HTML element that we create. The type of
+              <span class="red-color-text">stringHtml</span> parameter is a
+              string which contains HTML code.
             </p>
             <p>
-              For example, we can use the <span class="bold-blue-text">insertAdjacentHTML()</span> method to
-              add new <span class="gray-color-text">&lt;li&gt;</span> elements to the parent
-              <span class="gray-color-text">&lt;ul&gt;</span> HTML element that already contains three existing &lt;li&gt; elements.
+              For example, we can use the
+              <span class="bold-blue-text">insertAdjacentHTML()</span> method to
+              add new <span class="gray-color-text">&lt;li&gt;</span> elements
+              to the parent <span class="gray-color-text">&lt;ul&gt;</span> HTML
+              element that already contains three existing &lt;li&gt; elements.
             </p>
           </div>
           <div class="ul-container">
-            <ul class="ul-existing-htm">
-              <li>existing &lt;li&gt; html element</li>
-              <li>existing &lt;li&gt; html element</li>
-              <li>existing &lt;li&gt; html element</li>
-            </ul>
+            <div>
+              <ul class="ul-existing-htm">
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+              </ul>
+            </div>
           </div>
           <div>
             <p>We create the followig JavaScript code to do it:</p>
             <div class="js-code-container">
-              <p class="js-code">
+              <p>
                 const ul = document.querySelector(".ul-insert-html-example");
               </p>
-              <p class="js-code">
-                const li = `&lt;li&gt;element added by &lt;span&gt;JavaScript&lt;/span&gt;&lt;/li&gt;`;
+              <p>
+                const li = `&lt;li&gt;element added
+                by&lt;span&gt;JavaScript&lt;/span&gt;&lt;/li&gt;`;
               </p>
-              <p class="js-code">ul.insertAdjacentHTML("afterbegin", li);</p>
+              <p>ul.insertAdjacentHTML("afterbegin", li);</p>
             </div>
             <p>And we have the result:</p>
           </div>
           <div class="ul-container">
-            <ul class="ul-insert-html-example">
-              <li>existing &lt;li&gt; html element</li>
-              <li>existing &lt;li&gt; html element</li>
-              <li>existing &lt;li&gt; html element</li>
-            </ul>
+            <div>
+              <ul class="ul-insert-html-example">
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+                <li>existing &lt;li&gt; html element</li>
+              </ul>
+            </div>
           </div>
-          <p>We can use the following parameters to insert the created HTML element:</p>
+          <p>
+            We can use the following parameters to insert the created HTML
+            element:
+          </p>
           <p>
             <span class="gray-color-text">"afterbegin"</span>,
             <span class="gray-color-text">"beforeend"</span>,
@@ -77,8 +94,9 @@
             <span class="gray-color-text">"afterend"</span>.
           </p>
           <p>
-            <span class="gray-color-text">"afterbegin"</span> - "responses" for inserting created HTML element
-             before the first child element of theparent element:
+            <span class="gray-color-text">"afterbegin"</span> - "responses" for
+            inserting created HTML element before the first child element of
+            theparent element:
           </p>
           <div class="ul-container">
             <div>
@@ -90,8 +108,9 @@
             </div>
           </div>
           <p>
-            <span class="gray-color-text">"beforeend"</span> - "responses" for inserting created HTML
-            element after the last child element of the parent element:
+            <span class="gray-color-text">"beforeend"</span> - "responses" for
+            inserting created HTML element after the last child element of the
+            parent element:
           </p>
           <div class="ul-container">
             <div>
@@ -130,30 +149,39 @@
               </div>
             </div>
             <p>
-              We can easily use the <span class="bold-blue-text">insertAdjacentHTML()</span> method for creating and 
-              <a href="https://romannet77.github.io/js-event-delegation/" target="_blank">adding HTML elements dynamically by event</a>  !
+              We can easily use the
+              <span class="bold-blue-text">insertAdjacentHTML()</span> method
+              for creating and
+              <a
+                href="https://romannet77.github.io/js-event-delegation/"
+                target="_blank"
+                >adding HTML elements dynamically by event
+              </a>!
             </p>
             <p>
               For example, we want to add the new
-              <span class="gray-color-text">&lt;li&gt;</span> element to the parent
-              <span class="gray-color-text">&lt;ul&gt;</span> element by the click
+              <span class="gray-color-text">&lt;li&gt;</span> element to the
+              parent <span class="gray-color-text">&lt;ul&gt;</span> element by
+              the click
               <span class="gray-color-text">&lt;button&gt;</span> event.
             </p>
             <p>
-              First of all, let's create a button "Add &lt;li&gt;
-              element" using the insertAdjacentHTML() method !
+              First of all, let's create a button "Add &lt;li&gt; element" using
+              the insertAdjacentHTML() method !
             </p>
             <div class="js-code-container">
-              <p class="js-code">
-                const buttonHtmlElement = `&lt;button class="button-add-html-element"&gt; Add &lt;li&gt;
-                 element&lt;/button&gt;`;
+              <p>
+                const buttonHtmlElement = `&lt;button
+                class="button-add-html-element"&gt; Add &lt;li&gt;
+                element&lt;/button&gt;`;
               </p>
-              <p class="js-code">
-                const ulParentEl = document.querySelector( "ul.parent-element-for-button" );
+              <p>
+                const ulParentEl = document.querySelector(
+                "ul.parent-element-for-button" );
               </p>
-              <p class="js-code">
-                ulParentEl.insertAdjacentHTML(
-                  "beforebegin", buttonHtmlElement);
+              <p>
+                ulParentEl.insertAdjacentHTML( "beforebegin",
+                buttonHtmlElement);
               </p>
             </div>
             <div class="ul-container">
@@ -167,49 +195,68 @@
             </div>
             <div>
               <p>
-                Now we can attach an event handler to the created <span class="gray-color-text">&lt;button&gt;</span>:
+                Now we can attach an event handler to the created
+                <span class="gray-color-text">&lt;button&gt;</span>:
               </p>
               <div class="js-code-container">
-                <p class="js-code">
-                  const button = document.querySelector("button");
+                <p>const button = document.querySelector("button");</p>
+                <p>
+                  const liAddedByClick = `&lt;li&gt;added by click&lt;span&gt;
+                  class="red-color-text" (JavaScript)&lt;/span&gt;&lt;/li&gt;`;
                 </p>
-                <p class="js-code">
-                  const liAddedByClick = `&lt;li&gt;added by click&lt;span&gt; class="red-color-text"
-                  (JavaScript)&lt;/span&gt;&lt;/li&gt;`;
-                </p>
-                <p class="js-code">
-                  button.addEventListener("click", () => {<br/> ulParentEl.insertAdjacentHTML(
-                    "afterbegin", liAddedByClick); <br/> &nbsp;&nbsp;}<br/>);  
-                </p>
+                <div class="js-function">
+                  <p>button.addEventListener("click", () => {</p>
+                  <div class="function-body-part">
+                    <p>
+                      ulParentEl.insertAdjacentHTML( "afterbegin",
+                      liAddedByClick);
+                    </p>
+                  </div>
+                  <p>&nbsp;&nbsp;}</p>
+                  <p>);</p>
+                </div>
               </div>
               <p>
-                So we can add <span class="gray-color-text">&lt;li&gt;</span> elements by clicking created button !
+                So we can add
+                <span class="gray-color-text">&lt;li&gt;</span> elements by
+                clicking created button !
               </p>
               <p>
-                <span class="bold-blue-text">Try It! Click the "Add &lt;li&gt; element" button !</span>
+                <span class="bold-blue-text"
+                  >Try It! Click the "Add &lt;li&gt; element" button !</span>
               </p>
               <div class="conclusion-container">
                 <h3>Conclusion</h3>
-                <p>All that we need to create and add the HTML element to the DOM, using the JavaScript<span
-                  class="bold-blue-text"> insertAdjacentHTML()</span> method, is:
+                <p>
+                  All that we need to create and add the HTML element to the
+                  DOM, using the JavaScript<span class="bold-blue-text">
+                    insertAdjacentHTML() </span>method, is:
                 </p>
                 <p>
-                  1)<span class="conclusion-text"> Create the HTML element that we need:</span><br>
-                    const li = `&lt;li&gt;element added by &lt;span&gt;JavaScript&lt;/span&gt;&lt;/li&gt;`;</p>
-                <p>
-                  2)<span class="conclusion-text"> Choose its parent HTML element:</span><br> 
-                  const ul = document.querySelector(".ul-insert-html-example");
+                  1)<span class="conclusion-text">
+                    Create the HTML element that we need:</span><br />
+                    const li = `&lt;li&gt;element added by
+                  &lt;span&gt;JavaScript&lt;/span&gt;&lt;/li&gt;`;
                 </p>
                 <p>
-                  3)<span class="conclusion-text"> Indicate the place where we want to store the created HTML element:</span><br>
-                  ul.insertAdjacentHTML("afterbegin", li);
+                  2)<span class="conclusion-text">
+                    Choose its parent HTML element:</span><br />
+                    const ul = document.querySelector(".ul-insert-html-example");
                 </p>
                 <p>
-                  And that's it! And that is the simplicity and the beauty of the
-                  <span class="bold-blue-text">insertAdjacentHTML()</span> method !
+                  3)<span class="conclusion-text">
+                    Indicate the place where we want to store the created HTML
+                    element:</span><br />
+                    ul.insertAdjacentHTML("afterbegin", li);
+                </p>
+                <p>
+                  And that's it! And that is the simplicity and the beauty of
+                  the
+                  <span class="bold-blue-text">insertAdjacentHTML()</span>
+                  method !
                 </p>
               </div>
-          </div>
+            </div>
           </div>
         </div>
       </div>
@@ -217,18 +264,21 @@
     <footer>
       <div class="footer-img">
         <a href="https://github.com/Romannet77" target="_blank">
-          <img class="my-photo" src="./images/my-photo.jpeg" alt="my-photo"/>
+          <img class="my-photo" src="./images/my-photo.jpeg" alt="my-photo" />
         </a>
       </div>
       <div class="profile-links">
-        <a href="https://www.linkedin.com/in/roman-yurchenko-89630923b/" target="_blank">
-          <img src="./images/linkedin-icon.svg" alt="LinkedIn-img"/>
+        <a
+          href="https://www.linkedin.com/in/roman-yurchenko-89630923b/"
+          target="_blank">
+          <img src="./images/linkedin-icon.svg" alt="LinkedIn-img" />
         </a>
         <a href="https://github.com/Romannet77" target="_blank">
-          <img src="./images/github-icon.svg" alt="Git-img"/>
+          <img src="./images/github-icon.svg" alt="Git-img" />
         </a>
       </div>
-      <p class="author-info">© 2022 Written and Developed by Mr.
+      <p class="author-info">
+        © 2022 Written and Developed by Mr.
         <span><a href="https://github.com/Romannet77" target="_blank">Roman Yurchenko</a></span>
       </p>
     </footer>
